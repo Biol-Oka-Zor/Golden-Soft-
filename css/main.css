@@ -30,7 +30,7 @@ a {
 
 .header {
   background-color: white;
-  padding: 15px 0;
+  padding: 10px 0;
   box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
 }
 
@@ -44,7 +44,7 @@ a {
 }
 
 .header__logo {
-  font-size: 24px;
+  font-size: 20px;
   font-weight: bold;
   color: #4CAF50;
 }
@@ -57,7 +57,7 @@ a {
 .header__nav-link {
   text-decoration: none;
   color: #333;
-  font-size: 16px;
+  font-size: 10px;
   transition: color 0.3s;
 }
 
@@ -91,4 +91,8 @@ a {
 
 .header__icon:hover {
   color: #4CAF50;
+}
+
+.hero__title {
+  font-size: 0px;
 }/*# sourceMappingURL=main.css.map */
