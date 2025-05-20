@@ -28,29 +28,9 @@ a {
   padding-right: 20px;
 }
 
-<<<<<<< HEAD
 .header {
   background-color: white;
   padding: 10px 0;
-=======
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-}
-
-body {
-  font-family: Arial, sans-serif;
-  line-height: 1.6;
-  color: #333;
-  background-color: #f5f5f5;
-}
-
-/* Header */
-.header {
-  background-color: white;
-  padding: 15px 0;
->>>>>>> 9bc5e8a917e8ba4275c1fb1224f68874b0685b13
   box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
 }
 
@@ -64,11 +44,7 @@ body {
 }
 
 .header__logo {
-<<<<<<< HEAD
   font-size: 20px;
-=======
-  font-size: 24px;
->>>>>>> 9bc5e8a917e8ba4275c1fb1224f68874b0685b13
   font-weight: bold;
   color: #4CAF50;
 }
@@ -81,11 +57,7 @@ body {
 .header__nav-link {
   text-decoration: none;
   color: #333;
-<<<<<<< HEAD
   font-size: 10px;
-=======
-  font-size: 16px;
->>>>>>> 9bc5e8a917e8ba4275c1fb1224f68874b0685b13
   transition: color 0.3s;
 }
 
@@ -121,10 +93,100 @@ body {
   color: #4CAF50;
 }
 
-<<<<<<< HEAD
 .hero__title {
-  font-size: 0px;
-=======
+  font-size: 40px;
+}
+
+.hero__left-img {
+  width: 100px;
+  height: 100px;
+}
+
+.hero {
+  background-image: url("../../Rectangle 6.png");
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  line-height: 1.6;
+  color: #333;
+  background-color: #f5f5f5;
+}
+
+/* Header */
+.header {
+  background-color: white;
+  padding: 15px 0;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.header__container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.header__logo {
+  font-size: 24px;
+  font-weight: bold;
+  color: #4CAF50;
+}
+
+.header__nav {
+  display: flex;
+  gap: 30px;
+}
+
+.header__nav-link {
+  text-decoration: none;
+  color: #333;
+  font-size: 16px;
+  transition: color 0.3s;
+}
+
+.header__nav-link:hover {
+  color: #4CAF50;
+}
+
+.header__contact {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+}
+
+.header__phone {
+  color: #333;
+  text-decoration: none;
+  font-weight: 500;
+}
+
+.header__icons {
+  display: flex;
+  gap: 10px;
+}
+
+.header__icon {
+  padding: 8px;
+  color: #666;
+  text-decoration: none;
+  transition: color 0.3s;
+}
+
+.header__icon:hover {
+  color: #4CAF50;
+}
+
 /* Breadcrumb */
 .breadcrumb {
   padding: 15px 0;
@@ -626,5 +688,4 @@ body {
   .footer__logo {
     max-width: 50px;
   }
->>>>>>> 9bc5e8a917e8ba4275c1fb1224f68874b0685b13
 }/*# sourceMappingURL=main.css.map */
