@@ -1,0 +1,68 @@
+.header {
+  background-color: white;
+  padding: 10px 0;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.header__container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.header__logo {
+  font-size: 20px;
+  font-weight: bold;
+  color: #4CAF50;
+}
+
+.header__nav {
+  display: flex;
+  gap: 30px;
+}
+
+.header__nav-link {
+  text-decoration: none;
+  color: #333;
+  font-size: 10px;
+  transition: color 0.3s;
+}
+
+.header__nav-link:hover {
+  color: #4CAF50;
+}
+
+.header__contact {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+}
+
+.header__phone {
+  color: #333;
+  text-decoration: none;
+  font-weight: 500;
+}
+
+.header__icons {
+  display: flex;
+  gap: 10px;
+}
+
+.header__icon {
+  padding: 8px;
+  color: #666;
+  text-decoration: none;
+  transition: color 0.3s;
+}
+
+.header__icon:hover {
+  color: #4CAF50;
+}
+
+.hero__title {
+  font-size: 0px;
+}/*# sourceMappingURL=glavniy.css.map */
