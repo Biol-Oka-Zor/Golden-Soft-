@@ -206,6 +206,7 @@ body {
     z-index: 2;
     margin-left: 580px;
 }
+
 .carousel-button2 {
     position: absolute;
     top: 95%;
@@ -253,29 +254,30 @@ body {
         flex-direction: column;
         height: auto;
     }
-    
+
     .carousel {
         height: auto;
     }
-    
-    .product-image, .product-info {
+
+    .product-image,
+    .product-info {
         width: 100%;
     }
-    
+
     .product-image {
         padding: 20px 20px 0;
     }
-    
+
     .product-info {
         padding: 20px;
     }
-    
+
     .carousel-button {
         width: 30px;
         height: 30px;
         font-size: 16px;
     }
-    
+
 }
 
 
@@ -336,4 +338,3 @@ body {
     border-right: 2px solid #C4CDD5;
     padding-right: 10px;
 }
-
