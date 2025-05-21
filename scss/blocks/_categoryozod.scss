@@ -1,0 +1,275 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+    color: #333;
+    background-color: #f5f5f5;
+}
+
+/* Header */
+.header {
+    background-color: white;
+    padding: 15px 0;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.header__container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.header__logo {
+    font-size: 24px;
+    font-weight: bold;
+    color: #4CAF50;
+}
+
+.header__nav {
+    display: flex;
+    gap: 30px;
+}
+
+.header__nav-link {
+    text-decoration: none;
+    color: #333;
+    font-size: 16px;
+    transition: color 0.3s;
+}
+
+.header__nav-link:hover {
+    color: #4CAF50;
+}
+
+.header__contact {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+
+.header__phone {
+    color: #333;
+    text-decoration: none;
+    font-weight: 500;
+}
+
+.header__icons {
+    display: flex;
+    gap: 10px;
+}
+
+.header__icon {
+    padding: 8px;
+    color: #666;
+    text-decoration: none;
+    transition: color 0.3s;
+}
+
+.header__icon:hover {
+    color: #4CAF50;
+}
+
+/* Breadcrumb */
+.breadcrumb {
+    padding: 15px 0;
+    background-color: #f8f9fa;
+}
+
+.breadcrumb__container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+.breadcrumb__text {
+    font-size: 14px;
+    color: #666;
+}
+
+.breadcrumb__link {
+    color: #4CAF50;
+    text-decoration: none;
+}
+
+/* Categories Section */
+.categories {
+    padding: 40px 0;
+    background-color: white;
+}
+
+.categories__container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+.categories__title {
+    text-align: center;
+    font-size: 32px;
+    margin-bottom: 40px;
+    color: #333;
+}
+
+.categories__grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 30px;
+    margin-bottom: 40px;
+}
+
+.category-card {
+    background-color: #f8f9fa;
+    border-radius: 8px;
+    padding: 20px;
+    text-align: center;
+    transition: transform 0.3s, box-shadow 0.3s;
+    cursor: pointer;
+}
+
+.category-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+}
+
+.category-card__image {
+    width: 120px;
+    height: 120px;
+    margin: 0 auto 20px;
+    background-color: #ddd;
+    border-radius: 8px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    overflow: hidden;
+}
+
+.category-card__image img {
+    max-width: 100%;
+    max-height: 100%;
+    object-fit: contain;
+}
+
+.category-card__title {
+    font-size: 16px;
+    color: #333;
+    margin-bottom: 10px;
+}
+
+.categories__button {
+    display: block;
+    margin: 0 auto;
+    padding: 12px 30px;
+    background-color: #2196F3;
+    color: white;
+    text-decoration: none;
+    border-radius: 5px;
+    font-size: 16px;
+    transition: background-color 0.3s;
+    border: none;
+}
+
+.categories__button:hover {
+    background-color: rgb(71, 71, 193);
+}
+
+/* Footer */
+.footer {
+    background-color: #2c3e50;
+    color: white;
+    padding: 40px 0 20px;
+}
+
+.footer__container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+.footer__content {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 40px;
+    margin-bottom: 30px;
+}
+
+.footer__section {
+    display: flex;
+    flex-direction: column;
+}
+
+.footer__logo {
+    width: 105px;
+    height: 88px;
+    top: 64px;
+    left: 100px;
+
+}
+
+.footer__title {
+    font-size: 18px;
+    margin-bottom: 15px;
+    color: #ecf0f1;
+}
+
+.footer__link {
+    color: #bdc3c7;
+    text-decoration: none;
+    margin-bottom: 8px;
+    transition: color 0.3s;
+}
+
+.footer__link:hover {
+    color: white;
+}
+
+.footer__contact-item {
+    margin-bottom: 10px;
+    color: #bdc3c7;
+}
+
+.footer__social {
+    display: flex;
+    gap: 15px;
+    margin-top: 20px;
+}
+
+.footer__social-link {
+    color: #bdc3c7;
+    text-decoration: none;
+    font-size: 20px;
+    transition: color 0.3s;
+}
+
+.footer__social-link:hover {
+    color: white;
+}
+
+.footer__bottom {
+    text-align: center;
+    padding-top: 20px;
+    border-top: 1px solid #34495e;
+    color: #bdc3c7;
+    font-size: 14px;
+}
+
+
+
+    // RESPONSIVE
+
+@media only screen and (max-width: 480px) {
+    .header{
+        display: none;
+    }
+    .header__icons{
+        display: block;
+    }
+}
