@@ -28,6 +28,7 @@ a {
   padding-right: 20px;
 }
 
+<<<<<<< HEAD
 .header {
   background-color: #fbfafa;
   padding: 10px 0;
@@ -349,6 +350,8 @@ body {
   padding-right: 10px;
 }
 
+=======
+>>>>>>> fef8f0087d43e1ab48c9e297ca6fd6178a0e3b99
 * {
   margin: 0;
   padding: 0;
@@ -612,85 +615,80 @@ body {
   font-size: 14px;
 }
 
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-  font-family: Arial, sans-serif;
+@media only screen and (max-width: 480px) {
+  .header {
+    display: none;
+  }
+  .header__icons {
+    display: block;
+  }
 }
-
-body {
-  background-color: #f5f5f5;
-}
-
-.container {
-  max-width: 1200px;
-  margin: 0 auto;
-  padding: 0 15px;
-}
-
-/* Header Styles */
 .header {
-  background-color: #fff;
+  background-color: white;
+  padding: 10px 0;
   box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
-  position: sticky;
-  top: 0;
-  z-index: 100;
 }
 
 .header__container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px;
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 15px;
 }
 
 .header__logo {
+  font-size: 20px;
   font-weight: bold;
-  font-size: 24px;
-  color: #333;
+  color: #4CAF50;
 }
 
 .header__nav {
   display: flex;
+  gap: 30px;
 }
 
 .header__nav-link {
-  margin: 0 15px;
   text-decoration: none;
   color: #333;
+  font-size: 10px;
+  transition: color 0.3s;
+}
+
+.header__nav-link:hover {
+  color: #4CAF50;
 }
 
 .header__contact {
   display: flex;
   align-items: center;
+  gap: 15px;
 }
 
 .header__phone {
-  text-decoration: none;
   color: #333;
-  margin-right: 15px;
+  text-decoration: none;
+  font-weight: 500;
 }
 
 .header__icons {
   display: flex;
+  gap: 10px;
 }
 
 .header__icon {
-  margin-left: 10px;
+  padding: 8px;
+  color: #666;
   text-decoration: none;
-  font-size: 18px;
+  transition: color 0.3s;
 }
 
-/* Mobile menu button */
-.menu-btn {
-  background: none;
-  border: none;
-  font-size: 24px;
-  cursor: pointer;
-  display: none;
+.header__icon:hover {
+  color: #4CAF50;
 }
 
+<<<<<<< HEAD
 /* Breadcrumbs */
 .breadcrumb {
   padding: 10px 0;
@@ -929,4 +927,8 @@ body {
   .footer__logo {
     max-width: 50px;
   }
+=======
+.hero__title {
+  font-size: 0px;
+>>>>>>> fef8f0087d43e1ab48c9e297ca6fd6178a0e3b99
 }/*# sourceMappingURL=main.css.map */
