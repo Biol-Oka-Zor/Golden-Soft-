@@ -9,45 +9,142 @@
 <body>
     <header class="header">
         <div class="header__container">
-            <div class="header__logo"><img src="./Logo.png" alt=""></div>
+            <div class="header__logo"><img src="./assets/Logo.png" alt=""></div>
             <nav class="header__nav">
                 <a href="#" class="header__nav-link">Главная</a>
-                <a href="#" class="header__nav-link">Каталог ▼</a>
+                <a href="#" class="header__nav-link">Каталог <img src="./assets/Frame (2).png" alt=""></a>
                 <a href="#" class="header__nav-link">Оптовая продажа</a>
                 <a href="#" class="header__nav-link">О нас</a>
             </nav>
             <div class="header__contact">
-                <a href="tel:+79665588499" class="header__phone"><img src="./phone-call 1.png" alt=""> +7 (966) 55 88 499</a>
+                <a href="tel:+79665588499" class="header__phone"><img src="./assets/phone-call 1.png" alt=""> +7 (966) 55 88 499</a>
                 <div class="header__icons">
-                    <a href="#" class="header__icon"><img src="./Frame.png" alt=""></a>
-                    <a href="#" class="header__icon"><img src="./Frame (1).png" alt=""></a>
+                    <a href="#" class="header__icon"><img src="./assets/Frame.png" alt=""></a>
+                    <a href="#" class="header__icon"><img src="./assets/Frame (1).png" alt=""></a>
                 </div>
             </div>
         </div>
     </header>
     <main>
-        <section class="hero">
-            <div class="header__container">
-                <div class="hero__left-img">
-                    <img src="./Rectangle 6.png" alt="">
+        <div class="carousel-container">
+        <button class="carousel-button prev">&#10094;</button>
+        <div class="carousel">
+            <!-- Slide 1 -->
+           <div class="carousel-slide">
+                <div class="product-image">
+                    <img src="./assets/Rectangle 6.png" alt="Golden Soft GS-200Z-5 Gold" />
                 </div>
-                <div class="hero__right-information">
-                    <h2 class="hero__title">Golden Soft  <br>GS-200Z-5 для офиса</h2>
-                    <br>
-                    <p class="hero__text">Замок дверной электронный Golden Soft GS-200Z-5 имеет роскошный глянцевый блеск, четкие линии, красивые формы.</p>
-                    <br>
-                    <p class="hero__text">Подходит для установки на деревянную/межкомнатную дверь.</p>
-                    <br>
-                    <div class="hero__prise">
-                        <h2 class="hero__prise-title">33 000₽</h2>
-                        <h2 class="hero__prise-title-delete"><del>37 000₽</del></h2>
+                <div class="product-info">
+                    <h1 class="product-title">Golden Soft</h1>
+                    <h2 class="product-subtitle">GS-200Z-5 Золотой</h2>
+                    <p class="product-description">
+                        Премиальный дверной замок с биометрической системой доступа. Золотое исполнение для элегантных интерьеров.
+                    </p>
+                    <p class="product-description">
+                        Установка на деревянные двери толщиной от 40 до 100 мм.
+                    </p>
+                    <div class="price-container">
+                        <span class="current-price">35 000₽</span>
+                        <span class="old-price">40 000₽</span>
                     </div>
-                    <br>
-                    <button class="hero__right-btn" type="submit">Добавить в корзину</button>
+                    <button class="add-to-cart">Добавить в корзину</button>
                 </div>
             </div>
-        </section>
+            
+            <!-- Slide 2 -->
+            <div class="carousel-slide">
+                <div class="product-image">
+                    <img src="./assets/фото (1).png" alt="Golden Soft GS-200Z-5 Gold" />
+                </div>
+                <div class="product-info">
+                    <h1 class="product-title">Golden Soft</h1>
+                    <h2 class="product-subtitle">GS-200Z-5 Золотой</h2>
+                    <p class="product-description">
+                        Премиальный дверной замок с биометрической системой доступа. Золотое исполнение для элегантных интерьеров.
+                    </p>
+                    <p class="product-description">
+                        Установка на деревянные двери толщиной от 40 до 100 мм.
+                    </p>
+                    <div class="price-container">
+                        <span class="current-price">35 000₽</span>
+                        <span class="old-price">40 000₽</span>
+                    </div>
+                     <button class="add-to-cart">Добавить в корзину</button>
+                </div>
+            </div>
+            
+            <!-- Slide 3 -->
+            <div class="carousel-slide">
+                <div class="product-image">
+                    <img src="./assets/фото.png" alt="Golden Soft GS-200Z-5 Silver" />
+                </div>
+                <div class="product-info">
+                    <h1 class="product-title">Golden Soft</h1>
+                    <h2 class="product-subtitle">GS-200Z-5 Серебряный</h2>
+                    <p class="product-description">
+                        Современный электронный замок с поддержкой удаленного управления. Серебряное исполнение.
+                    </p>
+                    <p class="product-description">
+                        Встроенная система защиты от взлома. Резервное питание от аккумулятора.
+                    </p>
+                    <div class="price-container">
+                        <span class="current-price">34 000₽</span>
+                                                            <span class="old-price">38 500₽</span>
+                    </div>
+                    <button class="add-to-cart">Добавить в корзину</button>
+                </div>
+            </div>
+        </div>
+        <button class="carousel-button2 next2">&#10095;</button>
+        <div class="carousel-nav">
+            <div class="carousel-dot active"></div>
+            <div class="carousel-dot"></div>
+            <div class="carousel-dot"></div>
+        </div>
+    </div>
     </main>
+    <br><br>
+    <section class="section-1">
+        <div class="hero__container">
+            <div class="section1__wrapper">
+                <div class="persentage-1">
+                    <h2 class="section1__title">5,567</h2>
+                    <p class="section1__text">Счастливых клиентов</p>
+                </div>
+                <div class="persentage-2">
+                    <h2 class="section1__title">1245</h2>
+                    <p class="section1__text">Продуктов на выбор</p>
+                </div>
+                <div class="persentage-3">
+                    <h2 class="section1__title">372</h2>
+                    <p class="section1__text">Продаж в день</p>
+                </div>
+                <div class="persentage-4">
+                    <h2 class="section1__title">20</h2>
+                    <p class="section1__text">Лет на рынке</p>
+                </div>
+            </div>
+        </div>
+    </section>
+    <br><br>
+    <seection class="section-2">
+        <div class="hero__container">
+            <div class="section2__wrapper">
+                <div class="coment-1">
+                    <div class="section2__coment-logo"><img src="./assets/product-return 1.png" alt=""></div>
+                    <p class="section2__coment-text">Возврат удвоенной стоимости <br> каждого замка в случае брака. </p>
+                </div>
+                <div class="coment-2">
+                    <div class="section2__coment-logo"><img src="./assets/evaluate 1.png" alt=""></div>
+                    <p class="section2__coment-text">Наносим ваш логотип компании <br> на наш продукт</p>
+                </div>
+                <div class="coment-3">
+                    <div class="section2__coment-logo"><img src="./assets/product-return 1 (1).png" alt=""></div>
+                    <p class="section2__coment-text">Возврат удвоенной стоимости <br> каждого замка в случае брака. </p>
+                </div>
+            </div>
+        </div>
+    </seection>
 
 
     <script src="./js/app.js"></script>
