@@ -28,21 +28,71 @@
 
     <div class="catalog__upper-texts">
         <div class="container">
-            <p>Главная / <p style="color: gray;">Каталог</p></p>
+            <div class="catalog__inner-texts">
+            <p>Главная /</p>
 
+            <p style="color: grey; padding-left: 5px;">Каталог</p>
+            </div>
         <div class="catalog__upper-text-box">
-            <h1>Накладные электронные замки</h1>
+            <h1 style="margin-right: 10px;">Накладные электронные замки</h1>
 
             <span>(854)</span>
         </div>
         </div>
     </div>
 
-    
+    <div class="container">
+      <div class="catalog__filter-box">
+          <div class="filters">
+      <button class="reset-button">Сбросить фильтры</button>
+      <div class="filter-tag">
+        <span>Электронные кодовые замки</span>
+        <span class="remove">✖</span>
+      </div>
+    </div>
+    <select class="sort">
+      <option>Популярности</option>
+      <option>Цене</option>
+      <option>Рейтингу</option>
+    </select>
+      </div>
+    </div>
 
     <main>
         <section class="catalog__side-bar">
+            <div class="filter-box">
+  <h3>Фильтр</h3>
 
+  <div class="section">
+    <div class="section-title">Цена</div>
+    <div class="price-range">
+      <input style="border-radius: 0;" type="text" value="79 000">
+      <input style="border-radius: 0;" type="text" value="24 500">
+    </div>
+    <input type="range" class="range-slider" min="0" max="100000" value="24500">
+  </div>
+
+  <div class="section">
+    <div style="margin-bottom: 10px;" class="section-title">Особенности</div>
+    <div class="checkbox-group">
+      <label><input type="checkbox" checked> Электронные кодовые замки (65)</label>
+      <label><input type="checkbox"> Биометрические замки (15)</label>
+      <label><input type="checkbox"> Замок с отпечатком (28)</label>
+      <label><input type="checkbox"> Замок с бесконтактной картой (25)</label>
+      <label><input type="checkbox"> Программируемые замки (8)</label>
+      <label><input type="checkbox"> Замки на батарейках (43)</label>
+      <label><input type="checkbox"> Замки с удалённым доступом (31)</label>
+      <label><input type="checkbox"> Bluetooth замки (7)</label>
+      <label><input type="checkbox"> Электронные замки для квартиры (17)</label>
+      <label><input type="checkbox"> Замки для стеклянных дверей (24)</label>
+      <label><input type="checkbox"> Электронные цилиндры (3)</label>
+    </div>
+  </div>
+
+  <div class="accordion">Цвет</div>
+  <div class="accordion">Материал</div>
+  <div class="accordion">Размеры</div>
+</div>
         </section>
     </main>
 
