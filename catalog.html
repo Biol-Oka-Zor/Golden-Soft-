@@ -7,21 +7,127 @@
     <link rel="stylesheet" href="./css/main.css">
 </head>
 <body>
+      <header class="header">
+        <div class="header__container">
+            <div class="header__logo"><img src="./Logo.png" alt=""></div>
+            <nav class="header__nav">
+                <a href="#" class="header__nav-link">Главная</a>
+                <a href="./catalog.html" class="header__nav-link">Каталог ▼</a>
+                <a href="#" class="header__nav-link">Оптовая продажа</a>
+                <a href="#" class="header__nav-link">О нас</a>
+            </nav>
+            <div class="header__contact">
+                <a href="tel:+79665588499" class="header__phone"><img src="./phone-call 1.png" alt=""> +7 (966) 55 88 499</a>
+                <div class="header__icons">
+                    <a href="#" class="header__icon"><img src="./Frame.png" alt=""></a>
+                    <a href="#" class="header__icon"><img src="./Frame (1).png" alt=""></a>
+                </div>
+            </div>
+        </div>
+    </header>
+
     <div class="catalog__upper-texts">
         <div class="container">
-            <p>Главная / <p style="color: gray;">Каталог</p></p>
+            <div class="catalog__inner-texts">
+            <p>Главная /</p>
 
+            <p style="color: grey; padding-left: 5px;">Каталог</p>
+            </div>
         <div class="catalog__upper-text-box">
-            <h1>Накладные электронные замки</h1>
+            <h1 style="margin-right: 10px;">Накладные электронные замки</h1>
 
             <span>(854)</span>
         </div>
         </div>
     </div>
 
+    <div class="container">
+      <div class="catalog__filter-box">
+          <div class="filters">
+      <button class="reset-button">Сбросить фильтры</button>
+      <div class="filter-tag">
+        <span>Электронные кодовые замки</span>
+        <span class="remove">✖</span>
+      </div>
+    </div>
+    <select class="sort">
+      <option>Популярности</option>
+      <option>Цене</option>
+      <option>Рейтингу</option>
+    </select>
+      </div>
+    </div>
+
+    <main style=" margin-top: 30px; display: flex;">
+        <section style="display: flex;" class="catalog__side-bar">
+           <div style="display: flex;" class="container">
+             <div class="filter-box">
+               <h3>Фильтр</h3>
+
+  <div class="section">
+    <div class="section-title">Цена</div>
+    <div class="price-range">
+      <input style="border-radius: 0;" type="text" value="79 000">
+      <input style="border-radius: 0;" type="text" value="24 500">
+    </div>
+    <input type="range" class="range-slider" min="0" max="100000" value="24500">
+  </div>
+
+  <div class="section">
+    <div style="margin-bottom: 10px;" class="section-title">Особенности</div>
+    <div class="checkbox-group">
+      <label><input type="checkbox" checked> Электронные кодовые замки (65)</label>
+      <label><input type="checkbox"> Биометрические замки (15)</label>
+      <label><input type="checkbox"> Замок с отпечатком (28)</label>
+      <label><input type="checkbox"> Замок с бесконтактной картой (25)</label>
+      <label><input type="checkbox"> Программируемые замки (8)</label>
+      <label><input type="checkbox"> Замки на батарейках (43)</label>
+      <label><input type="checkbox"> Замки с удалённым доступом (31)</label>
+      <label><input type="checkbox"> Bluetooth замки (7)</label>
+      <label><input type="checkbox"> Электронные замки для квартиры (17)</label>
+      <label><input type="checkbox"> Замки для стеклянных дверей (24)</label>
+      <label><input type="checkbox"> Электронные цилиндры (3)</label>
+    </div>
+  </div>
+
+  <div class="accordion">Цвет <img style="margin-left: 213px;" src="./Frame.svg" alt="img"></div>
+  <div class="accordion">Материал <img style="margin-left: 180px;" src="./Frame.svg" alt="img"></div>
+  <div class="accordion">Размеры <img style="margin-left: 188px;" src="./Frame.svg" alt="img"></div>
+</div>
+        <div class="card">
+    <div class="status out-of-stock">✖ Нет в наличии</div>
+    <div class="badge">SALE</div>
+    <img src="./Rectangle 6.png" alt="Замок для отеля">
+    <div class="gift">🎁 Подарок</div>
+    <div class="stars">★★★☆☆ <span class="reviews">(12 отзывов)</span></div>
+    <div class="title">Вариативный замок Golden Soft для отеля</div>
+    <div class="price">7 000₽ <span class="old-price">8 000₽</span></div>
+  </div>
+
+
+  <div class="card">
+    <div class="status in-stock">✔ В наличии</div>
+    <div class="badge">SALE</div>
+    <img src="./Rectangle 6.png" alt="Замок для офиса">
+    <div class="gift">🎁 Подарок</div>
+    <div class="stars">★★★☆☆ <span class="reviews">(12 отзывов)</span></div>
+    <div class="title">Дверной замок Golden Soft для офиса</div>
+    <div class="price">33 000₽ <span class="old-price">39 000₽</span></div>
+  </div>
+
+            </div>
+        </section>
+    </main>
+
+
+</div>
+
+
+     
     <main>
-        <section class="catalog__side-bar">
-            
+        <section class="catalog__cards">
+            <div class="container">
+              
         </section>
     </main>
 
