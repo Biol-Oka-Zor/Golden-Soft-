@@ -805,13 +805,6 @@ label.tab {
   background-color: #1c68e3;
 }
 
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Arial, sans-serif;
-}
-
 body {
   background-color: #f5f8fa;
   margin: 0;
@@ -969,4 +962,22 @@ button {
   border-top: 1px solid #34495e;
   color: #bdc3c7;
   font-size: 14px;
+}
+
+.header__logo {
+  font-size: 50px;
+  margin-left: 100px;
+}
+
+.burger__btn {
+  display: none;
+}
+
+@media only screen and (max-width: 480px) {
+  .header__container {
+    display: none;
+  }
+  .burger__btn {
+    display: block;
+  }
 }/*# sourceMappingURL=product1ozod.css.map */

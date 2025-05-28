@@ -1,0 +1,1358 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>ukam xuyet qimalaring</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
+        sans-serif;
+      background-color: #f5f7fa;
+      color: #333;
+    }
+
+    /* Header */
+    .top-banner {
+      background-color: #5a6670;
+      color: white;
+      text-align: center;
+      padding: 8px;
+      font-size: 14px;
+    }
+
+    .header {
+      background: white;
+      padding: 15px 0;
+      box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    }
+
+    .header-content {
+      max-width: 1200px;
+      margin: 0 auto;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 0 20px;
+    }
+
+    .logo {
+      display: flex;
+      align-items: center;
+      font-size: 24px;
+      font-weight: bold;
+      color: #4a90e2;
+    }
+
+    .logo::before {
+      content: "G";
+      background: #4a90e2;
+      color: white;
+      width: 30px;
+      height: 30px;
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin-right: 5px;
+      font-size: 18px;
+    }
+
+    .nav {
+      display: flex;
+      gap: 30px;
+    }
+
+    .nav a {
+      text-decoration: none;
+      color: #333;
+      font-weight: 500;
+      transition: color 0.3s;
+    }
+
+    .nav a:hover {
+      color: #4a90e2;
+    }
+
+    .contact-info {
+      display: flex;
+      align-items: center;
+      gap: 15px;
+    }
+
+    .phone {
+      color: #4a90e2;
+      font-weight: 600;
+    }
+
+    .icons {
+      display: flex;
+      gap: 10px;
+    }
+
+    .icon {
+      width: 20px;
+      height: 20px;
+      background: #ddd;
+      border-radius: 3px;
+      cursor: pointer;
+      transition: background 0.3s;
+    }
+
+    .icon:hover {
+      background: #4a90e2;
+    }
+
+    /* Main Content */
+    .main-section {
+      max-width: 1200px;
+      margin: 50px auto;
+      padding: 0 20px;
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 60px;
+      align-items: start;
+    }
+
+    .left-content h1 {
+      font-size: 48px;
+      font-weight: 700;
+      line-height: 1.2;
+      margin-bottom: 30px;
+      color: #2c3e50;
+    }
+
+    .left-content p {
+      font-size: 16px;
+      line-height: 1.6;
+      color: #666;
+      margin-bottom: 20px;
+    }
+
+    /* Form */
+    .form-container {
+      background: white;
+      padding: 40px;
+      border-radius: 12px;
+      box-shadow: 0 8px 25px rgba(0, 0, 0, 0.1);
+    }
+
+    .form-title {
+      font-size: 24px;
+      font-weight: 600;
+      margin-bottom: 30px;
+      text-align: center;
+      color: #2c3e50;
+    }
+
+    .form-row {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 20px;
+      margin-bottom: 20px;
+    }
+
+    .form-group {
+      display: flex;
+      flex-direction: column;
+    }
+
+    .form-group.full-width {
+      grid-column: 1 / -1;
+    }
+
+    .form-group label {
+      font-size: 14px;
+      color: #666;
+      margin-bottom: 8px;
+      font-weight: 500;
+    }
+
+    .form-group input,
+    .form-group textarea,
+    .form-group select {
+      padding: 12px 15px;
+      border: 1px solid #ddd;
+      border-radius: 6px;
+      font-size: 14px;
+      transition: border-color 0.3s, box-shadow 0.3s;
+    }
+
+    .form-group input:focus,
+    .form-group textarea:focus,
+    .form-group select:focus {
+      outline: none;
+      border-color: #4a90e2;
+      box-shadow: 0 0 0 3px rgba(74, 144, 226, 0.1);
+    }
+
+    .form-group textarea {
+      resize: vertical;
+      min-height: 100px;
+    }
+
+    .checkbox-group {
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+      margin: 20px 0;
+    }
+
+    .checkbox-item {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+    }
+
+    .checkbox-item input[type="checkbox"] {
+      width: 18px;
+      height: 18px;
+      accent-color: #4a90e2;
+    }
+
+    .checkbox-item label {
+      font-size: 14px;
+      color: #666;
+      cursor: pointer;
+    }
+
+    .submit-btn {
+      background: #4a90e2;
+      color: white;
+      padding: 15px 40px;
+      border: none;
+      border-radius: 6px;
+      font-size: 16px;
+      font-weight: 600;
+      cursor: pointer;
+      width: 100%;
+      transition: background 0.3s, transform 0.2s;
+    }
+
+    .submit-btn:hover {
+      background: #357abd;
+      transform: translateY(-1px);
+    }
+
+    .submit-btn:active {
+      transform: translateY(0);
+    }
+
+    /* How We Work Section */
+    .work-section {
+      max-width: 1200px;
+      margin: 80px auto;
+      padding: 0 20px;
+    }
+
+    .work-section h2 {
+      font-size: 36px;
+      font-weight: 700;
+      margin-bottom: 50px;
+      color: #2c3e50;
+    }
+
+    .work-steps {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 40px;
+    }
+
+    .work-step {
+      background: white;
+      padding: 30px;
+      border-radius: 12px;
+      box-shadow: 0 5px 15px rgba(0, 0, 0, 0.08);
+      position: relative;
+      transition: transform 0.3s, box-shadow 0.3s;
+    }
+
+    .work-step:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15);
+    }
+
+    .step-number {
+      position: absolute;
+      top: -15px;
+      right: 20px;
+      background: #4a90e2;
+      color: white;
+      width: 30px;
+      height: 30px;
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-weight: bold;
+      font-size: 14px;
+    }
+
+    .step-image {
+      width: 100%;
+      height: 200px;
+      background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
+      border-radius: 8px;
+      margin-bottom: 20px;
+      position: relative;
+      overflow: hidden;
+    }
+
+    .step-image::after {
+      content: "";
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      width: 60px;
+      height: 60px;
+      background: rgba(74, 144, 226, 0.2);
+      border-radius: 50%;
+    }
+
+    .step-title {
+      font-size: 18px;
+      font-weight: 600;
+      margin-bottom: 15px;
+      color: #2c3e50;
+    }
+
+    .step-description {
+      font-size: 14px;
+      line-height: 1.6;
+      color: #666;
+    }
+
+    /* Why Choose Us Section */
+    .why-choose-section {
+      max-width: 1200px;
+      margin: 80px auto;
+      padding: 0 20px;
+    }
+
+    .why-choose-section h2 {
+      font-size: 36px;
+      font-weight: 700;
+      margin-bottom: 50px;
+      color: #2c3e50;
+    }
+
+    .why-choose-content {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 60px;
+      align-items: center;
+    }
+
+    .why-choose-image {
+      width: 100%;
+      height: 400px;
+      background: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 300"><rect fill="%23f0f4f8" width="400" height="300"/><circle fill="%234a90e2" cx="150" cy="150" r="40" opacity="0.3"/><circle fill="%234a90e2" cx="250" cy="150" r="40" opacity="0.3"/><rect fill="%234a90e2" x="120" y="120" width="160" height="60" rx="30" opacity="0.2"/></svg>') center/cover;
+      border-radius: 12px;
+      position: relative;
+      overflow: hidden;
+    }
+
+    .why-choose-features {
+      display: flex;
+      flex-direction: column;
+      gap: 30px;
+    }
+
+    .feature-item {
+      display: flex;
+      gap: 20px;
+      align-items: flex-start;
+    }
+
+
+    .feature-icon {
+      width: 50px;
+      height: 50px;
+      background: linear-gradient(135deg, #4a90e2 0%, #357abd 100%);
+      border-radius: 12px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-shrink: 0;
+      position: relative;
+    }
+
+    .feature-icon::after {
+      content: "";
+      width: 20px;
+      height: 20px;
+      background: white;
+      border-radius: 50%;
+    }
+
+    .feature-content h4 {
+      font-size: 18px;
+      font-weight: 600;
+      margin-bottom: 8px;
+      color: #2c3e50;
+    }
+
+    .feature-content p {
+      font-size: 14px;
+      line-height: 1.6;
+      color: #666;
+    }
+
+    /* Projects Section */
+    .projects-section {
+      background: white;
+      padding: 80px 0;
+    }
+
+    .projects-container {
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 0 20px;
+    }
+
+    .projects-section h2 {
+      font-size: 36px;
+      font-weight: 700;
+      margin-bottom: 50px;
+      color: #2c3e50;
+    }
+
+    .project-showcase {
+      background: #f8f9fa;
+      border-radius: 12px;
+      padding: 40px;
+      display: grid;
+      grid-template-columns: 300px 1fr;
+      gap: 40px;
+      align-items: center;
+      margin-bottom: 30px;
+    }
+
+    .project-image {
+      width: 100%;
+      height: 200px;
+      background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+      border-radius: 8px;
+      position: relative;
+      overflow: hidden;
+    }
+
+    .project-image::after {
+      content: "RADISSON HOTELS";
+      position: absolute;
+      bottom: 10px;
+      left: 10px;
+      background: rgba(255, 255, 255, 0.9);
+      padding: 5px 10px;
+      border-radius: 4px;
+      font-size: 12px;
+      font-weight: bold;
+      color: #333;
+    }
+
+    .project-details {
+      display: flex;
+      flex-direction: column;
+      gap: 20px;
+    }
+
+    .project-header {
+      display: flex;
+      align-items: center;
+      gap: 15px;
+    }
+
+    .project-logo {
+      width: 40px;
+      height: 40px;
+      background: #2c3e50;
+      border-radius: 6px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: white;
+      font-weight: bold;
+      font-size: 14px;
+    }
+
+    .project-title {
+      font-size: 20px;
+      font-weight: 600;
+      color: #2c3e50;
+    }
+
+    .project-features {
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+    }
+
+    .project-feature {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      font-size: 14px;
+      color: #666;
+    }
+
+    .project-feature::before {
+      content: "✓";
+      color: #4a90e2;
+      font-weight: bold;
+      width: 16px;
+      height: 16px;
+      background: rgba(74, 144, 226, 0.1);
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 10px;
+    }
+
+    .project-budget {
+      font-size: 18px;
+      font-weight: 600;
+      color: #2c3e50;
+    }
+
+    .project-budget span {
+      color: #4a90e2;
+    }
+
+    .project-navigation {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      gap: 20px;
+      margin-top: 20px;
+    }
+
+    .nav-btn {
+      width: 40px;
+      height: 40px;
+      border: 1px solid #ddd;
+      background: white;
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      cursor: pointer;
+      transition: all 0.3s;
+    }
+
+    .nav-btn:hover {
+      border-color: #4a90e2;
+      background: #4a90e2;
+      color: white;
+    }
+
+    .nav-btn.disabled {
+      opacity: 0.5;
+      cursor: not-allowed;
+    }
+
+    .nav-dots {
+      display: flex;
+      gap: 10px;
+    }
+
+    .nav-dot {
+      width: 8px;
+      height: 8px;
+      border-radius: 50%;
+      background: #ddd;
+      cursor: pointer;
+      transition: background 0.3s;
+    }
+
+    .nav-dot.active {
+      background: #4a90e2;
+    }
+
+    /* Responsive */
+    @media (max-width: 768px) {
+      .header-content {
+        flex-direction: column;
+        gap: 15px;
+      }
+
+      .nav {
+        gap: 20px;
+      }
+
+      .main-section {
+        grid-template-columns: 1fr;
+        gap: 40px;
+        margin: 30px auto;
+      }
+
+      .left-content h1 {
+        font-size: 36px;
+      }
+
+      .form-row {
+        grid-template-columns: 1fr;
+      }
+
+      .work-steps {
+        grid-template-columns: 1fr;
+        gap: 30px;
+      }
+
+      .work-section h2 {
+        font-size: 28px;
+      }
+
+      .why-choose-content {
+        grid-template-columns: 1fr;
+        gap: 40px;
+      }
+
+      .why-choose-section h2,
+      .projects-section h2 {
+        font-size: 28px;
+      }
+
+      .project-showcase {
+        grid-template-columns: 1fr;
+        gap: 30px;
+        padding: 30px;
+      }
+
+      .project-header {
+        flex-direction: column;
+        align-items: flex-start;
+      }
+    }
+
+    /* Contact CTA Section */
+    .contact-cta-section {
+      background: #f8f9fa;
+      padding: 80px 0;
+      text-align: center;
+    }
+
+    .contact-cta-container {
+      max-width: 600px;
+      margin: 0 auto;
+      padding: 0 20px;
+    }
+
+    .contact-cta-section h2 {
+      font-size: 36px;
+      font-weight: 700;
+      margin-bottom: 20px;
+      color: #2c3e50;
+    }
+
+    .contact-cta-section p {
+      font-size: 16px;
+      color: #666;
+      margin-bottom: 40px;
+      line-height: 1.6;
+    }
+
+    .contact-cta-form {
+      display: flex;
+      gap: 15px;
+      max-width: 500px;
+      margin: 0 auto;
+    }
+
+    .contact-cta-form input {
+      flex: 1;
+      padding: 15px 20px;
+      border: 1px solid #ddd;
+      border-radius: 6px;
+      font-size: 14px;
+      transition: border-color 0.3s;
+    }
+
+    .contact-cta-form input:focus {
+      outline: none;
+      border-color: #4a90e2;
+    }
+
+    .contact-cta-form button {
+      background: #4a90e2;
+      color: white;
+      padding: 15px 30px;
+      border: none;
+      border-radius: 6px;
+      font-size: 14px;
+      font-weight: 600;
+      cursor: pointer;
+      transition: background 0.3s;
+      white-space: nowrap;
+    }
+
+    .contact-cta-form button:hover {
+      background: #357abd;
+    }
+
+    /* Footer */
+    .footer {
+      background: #2c3e50;
+      color: white;
+      padding: 60px 0 30px;
+    }
+
+    .footer-container {
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 0 20px;
+    }
+
+    .footer-content {
+      display: grid;
+      grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+      gap: 40px;
+      margin-bottom: 40px;
+    }
+
+    .footer-logo {
+      display: flex;
+      align-items: center;
+      font-size: 24px;
+      font-weight: bold;
+      margin-bottom: 30px;
+    }
+
+    .footer-logo::before {
+      content: "G";
+      background: #4a90e2;
+      color: white;
+      width: 30px;
+      height: 30px;
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin-right: 5px;
+      font-size: 18px;
+    }
+
+    .footer-column h4 {
+      font-size: 16px;
+      font-weight: 600;
+      margin-bottom: 20px;
+      color: white;
+    }
+
+    .footer-column ul {
+      list-style: none;
+      padding: 0;
+    }
+
+    .footer-column ul li {
+      margin-bottom: 12px;
+    }
+
+    .footer-column ul li a {
+      color: #bdc3c7;
+      text-decoration: none;
+      font-size: 14px;
+      transition: color 0.3s;
+    }
+
+    .footer-column ul li a:hover {
+      color: #4a90e2;
+    }
+
+    .footer-column p {
+      color: #bdc3c7;
+      font-size: 14px;
+      line-height: 1.6;
+      margin-bottom: 10px;
+    }
+
+    .social-links {
+      display: flex;
+      gap: 15px;
+      margin-top: 20px;
+    }
+
+    .social-link {
+      width: 35px;
+      height: 35px;
+      border: 1px solid #4a90e2;
+      border-radius: 6px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: #4a90e2;
+      text-decoration: none;
+      transition: all 0.3s;
+      font-size: 16px;
+    }
+
+    .social-link:hover {
+      background: #4a90e2;
+      color: white;
+    }
+
+    .footer-bottom {
+      border-top: 1px solid #34495e;
+      padding-top: 20px;
+      text-align: center;
+    }
+
+    .footer-bottom p {
+      color: #95a5a6;
+      font-size: 12px;
+    }
+
+    /* Responsive Footer */
+    @media (max-width: 768px) {
+      .contact-cta-form {
+        flex-direction: column;
+      }
+
+      .footer-content {
+        grid-template-columns: 1fr 1fr;
+        gap: 30px;
+      }
+
+      .contact-cta-section h2 {
+        font-size: 28px;
+      }
+    }
+
+    @media (max-width: 480px) {
+      .footer-content {
+        grid-template-columns: 1fr;
+        gap: 30px;
+      }
+    }
+
+    @media (max-width: 480px) {
+      .form-container {
+        padding: 25px;
+      }
+
+      .left-content h1 {
+        font-size: 28px;
+      }
+    }
+  </style>
+</head>
+
+<body>
+  <!-- Top Banner -->
+  <div class="top-banner">
+    Скидка 10% на пррведочку "ЗАМОК" на все заказы до 15.09
+    <span style="float: right; margin-right: 20px">Обратная связь</span>
+  </div>
+
+  <!-- Header -->
+  <header class="header">
+    <div class="header-content">
+      <div class="logo">S</div>
+      <nav class="nav">
+        <a href="#">Главная</a>
+        <a href="#">Каталог</a>
+        <a href="#">Оптовая продажа</a>
+        <a href="#">О нас</a>
+      </nav>
+      <div class="contact-info">
+        <span class="phone">📞 +7 (906) 55 98 499</span>
+        <div class="icons">
+          <div class="icon"></div>
+          <div class="icon"></div>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <!-- Main Section -->
+  <main class="main-section">
+    <div class="left-content">
+      <h1>Оформите заявку и мы вам перезвоним</h1>
+      <p>
+        Vitae urna, risus magna bibendum mauris et at dui nulla. Proin a nibh
+        nam viverra, lorem ac quam blandit nunc eu blandit ante vitae. Sit
+        tellus nulla donec mauris quis nulla elit.
+      </p>
+    </div>
+
+    <div class="form-container">
+      <h3 class="form-title">Оформление заявки</h3>
+      <form id="applicationForm">
+        <div class="form-row">
+          <div class="form-group">
+            <label for="name">Имя</label>
+            <input type="text" id="name" name="name" placeholder="Введите ваше имя" />
+          </div>
+          <div class="form-group">
+            <label for="phone">Номер телефона</label>
+            <input type="tel" id="phone" name="phone" placeholder="+7 (___) ___--" />
+          </div>
+        </div>
+
+        <div class="form-row">
+          <div class="form-group">
+            <label for="email">Ваш Email адрес</label>
+            <input type="email" id="email" name="email" placeholder="example@mail.com" />
+          </div>
+          <div class="form-group">
+            <label for="quantity">Количество</label>
+            <input type="number" id="quantity" name="quantity" placeholder="0" />
+          </div>
+        </div>
+
+        <div class="form-group full-width">
+          <label for="comment">Комментарий</label>
+          <textarea id="comment" name="comment" placeholder="Введите ваш комментарий"></textarea>
+        </div>
+
+        <div class="checkbox-group">
+          <div class="checkbox-item">
+            <input type="checkbox" id="personal-manager" name="services" />
+            <label for="personal-manager">Назначение персонального менеджера (бесплатно)</label>
+          </div>
+          <div class="checkbox-item">
+            <input type="checkbox" id="installation-help" name="services" />
+            <label for="installation-help">Помощь в монтажных работах (бесплатно)</label>
+          </div>
+        </div>
+
+        <button type="submit" class="submit-btn">Отправить заявку</button>
+      </form>
+    </div>
+  </main>
+
+  <!-- How We Work Section -->
+  <section class="work-section">
+    <h2>Как мы работаем</h2>
+    <div class="work-steps">
+      <div class="work-step">
+        <div class="step-number">1</div>
+        <img src="./assets/finish jalla 1.svg" alt="" class="step-image">
+        <h4 class="step-title">Оформление заявки</h4>
+        <p class="step-description">
+          Вы оставляете заявку на сайте или связываетесь с нашим менеджером по
+          одному из указанных номеров телефонов
+        </p>
+      </div>
+
+      <div class="work-step">
+        <div class="step-number">2</div>
+        <img src="./assets/finish jall 2.svg" alt="" class="step-image">
+        <h4 class="step-title">Согласование</h4>
+        <p class="step-description">
+          Мы консультируем Вас, согласовываем стоимость и время работы,
+          проводим анализ проекта компании
+        </p>
+      </div>
+
+      <div class="work-step">
+        <div class="step-number">3</div>
+        <img src="./assets/finish jalla 3.svg" alt="" class="step-image">
+
+        <h4 class="step-title">Отправка товара и установка</h4>
+        <p class="step-description">
+          Мы отправляем вам выбранную заявки доставляем в срок в место
+          назначения вашим для вас сотрудником нашей
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Contact CTA Section -->
+  <!-- Why Choose Us Section -->
+  <section class="why-choose-section">
+    <h2>Почему стоит выбрать нас</h2>
+    <div class="why-choose-content">
+    <img src="./assets/why 1.svg" alt="" class="why-choose-image">
+      <div class="why-choose-features">
+        <div class="feature-item">
+          <div class="feature-icon"></div>
+          <div class="feature-content">
+            <h4>Возврат удвоенной стоимости</h4>
+            <p>
+              За каждый потраченный сверх заявленной стоимости брак/опьяние,
+              мы возврём вам удвоенную стоимость.
+            </p>
+          </div>
+        </div>
+        <div class="feature-item">
+          <div class="feature-icon"></div>
+          <div class="feature-content">
+            <h4>Монтаж</h4>
+            <p>
+              Проводим монтажные работы любой сложности за в работе опытные,
+              что вам домой заказ
+            </p>
+          </div>
+        </div>
+        <div class="feature-item">
+          <div class="feature-icon"></div>
+          <div class="feature-content">
+            <h4>Брендирование продукта</h4>
+            <p>
+              Мы наносим ваш логотип любой сложности на свою продукцию, чтобы
+              выделить её экслюзивность
+            </p>
+          </div>
+        </div>
+        <div class="feature-item">
+          <div class="feature-icon"></div>
+          <div class="feature-content">
+            <h4>Брендирование продукта</h4>
+            <p>
+              Мы наносим ваш логотип любой сложности на свою продукцию, чтобы
+              выделить её экслюзивность
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Projects Section -->
+  <section class="projects-section">
+    <div class="projects-container">
+      <h2>Наши крупные проекты</h2>
+      <div class="project-showcase" id="projectShowcase">
+        <img src="./assets/why 2.svg" alt="" class="project-image">
+        <div class="project-details">
+          <div class="project-header">
+            <div class="project-logo">R</div>
+            <h3 class="project-title">
+              Проект для гостиницы Radisson Hotels
+            </h3>
+          </div>
+          <div class="project-features">
+            <div class="project-feature">
+              Установлено 123 брендинных замка Golden Bell для отеля
+            </div>
+            <div class="project-feature">
+              Была заменён типовой брендинг на все замки
+            </div>
+            <div class="project-feature">
+              Была проведена комплексная работы, также была произведена
+            </div>
+            <div class="project-feature">
+              поломка с подключением замков к системе
+            </div>
+          </div>
+          <div class="project-budget">Бюджет - <span>$5000</span></div>
+        </div>
+      </div>
+      <div class="project-navigation">
+        <button class="nav-btn" id="prevBtn">‹</button>
+        <div class="nav-dots">
+          <div class="nav-dot active"></div>
+          <div class="nav-dot"></div>
+          <div class="nav-dot"></div>
+        </div>
+        <button class="nav-btn" id="nextBtn">›</button>
+      </div>
+    </div>
+  </section>
+
+  <section class="contact-cta-section">
+    <div class="contact-cta-container">
+      <h2>Остались вопросы?</h2>
+      <p>
+        Если у вас возникли какие-то вопросы по поводу отправки заказа,
+        напишите вашу и мы Вам перезвоним
+      </p>
+      <form class="contact-cta-form" id="ctaForm">
+        <input type="text" placeholder="Ваше имя" name="name" required />
+        <input type="email" placeholder="Ваш Email" name="email" required />
+        <button type="submit">Отправить</button>
+      </form>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="footer-container">
+      <div class="footer-content">
+        <div class="footer-column">
+          <div class="footer-logo">S</div>
+          <div class="social-links">
+            <a href="#" class="social-link">VK</a>
+            <a href="#" class="social-link">TW</a>
+            <a href="#" class="social-link">FB</a>
+          </div>
+        </div>
+
+        <div class="footer-column">
+          <h4>Навигация</h4>
+          <ul>
+            <li><a href="#">Главная</a></li>
+            <li><a href="#">Каталог</a></li>
+            <li><a href="#">Оптовая продажа</a></li>
+            <li><a href="#">О нас</a></li>
+          </ul>
+        </div>
+
+        <div class="footer-column">
+          <h4>Наши Контакты</h4>
+          <p>Телефон</p>
+          <p>+7 (906) 955 00 58</p>
+          <p>+375 33 662 82 56</p>
+          <br />
+          <p>youservice@gmail.ru</p>
+          <p>kurashet@gmail.com</p>
+        </div>
+
+        <div class="footer-column">
+          <h4>Наш Адрес</h4>
+          <p>Беларусь</p>
+          <p>420100 г. Казань ул. Баумана, 58</p>
+        </div>
+
+        <div class="footer-column">
+          <h4>Информация</h4>
+          <ul>
+            <li><a href="#">Доставка и оплата</a></li>
+            <li><a href="#">Гарантии</a></li>
+            <li><a href="#">Возврат товара</a></li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="footer-bottom">
+        <p>© 2023 Golden Bell. All rights reserved.</p>
+      </div>
+    </div>
+  </footer>
+  <script>
+    // Phone number formatting
+    const phoneInput = document.getElementById("phone");
+    phoneInput.addEventListener("input", function (e) {
+      let x = e.target.value.replace(/\D/g, "");
+      x = x.replace(
+        /(\d{1})(\d{3})(\d{3})(\d{2})(\d{2})/,
+        "+$1 ($2) $3-$4-$5"
+      );
+      e.target.value = x;
+    });
+
+    // Form submission
+    document
+      .getElementById("applicationForm")
+      .addEventListener("submit", function (e) {
+        e.preventDefault();
+
+        // Get form data
+        const formData = new FormData(e.target);
+        const data = Object.fromEntries(formData);
+
+        // Simple validation
+        if (!data.name!data.phone) {
+      alert("Пожалуйста, заполните обязательные поля: Имя и Телефон");
+      return;
+    }
+
+    // Simulate form submission
+    const submitBtn = document.querySelector(".submit-btn");
+    const originalText = submitBtn.textContent;
+
+    submitBtn.textContent = "Отправляется...";
+    submitBtn.disabled = true;
+
+    setTimeout(() => {
+      alert(
+        "Заявка успешно отправлена! Мы свяжемся с вами в ближайшее время."
+      );
+      e.target.reset();
+      submitBtn.textContent = originalText;
+      submitBtn.disabled = false;
+    }, 2000);
+        });
+
+    // Smooth scroll for any internal links
+    document.querySelectorAll('a[href^="#"]').forEach((anchor) => {
+      anchor.addEventListener("click", function (e) {
+        e.preventDefault();
+        const target = document.querySelector(this.getAttribute("href"));
+        if (target) {
+          target.scrollIntoView({
+            behavior: "smooth",
+          });
+        }
+      });
+    });
+
+    // Add loading animation to form inputs
+    document.querySelectorAll("input, textarea, select").forEach((input) => {
+      input.addEventListener("focus", function () {
+        this.style.transform = "scale(1.02)";
+      });
+
+      input.addEventListener("blur", function () {
+        this.style.transform = "scale(1)";
+      });
+    });
+
+    // Project navigation functionality
+    const projects = [
+      {
+        title: "Проект для гостиницы Radisson Hotels",
+        logo: "R",
+        features: [
+          "Установлено 123 брендинных замка Golden Bell для отеля",
+          "Была заменён типовой брендинг на все замки",
+          "Была проведена комплексная работы, также была произведена",
+          "поломка с подключением замков к системе",
+        ],
+        budget: "$5000",
+        gradient: "linear-gradient(135deg, #667eea 0%, #764ba2 100%)",
+      },
+      {
+        title: "Проект для торгового центра Mall Plaza",
+        logo: "M",
+        features: [
+          "Установлено 89 систем безопасности по всему центру",
+          "Интеграция с центральной системой мониторинга",
+          "Проведено обучение персонала работе с системой",
+          "Настроена автоматическая система отчетности",
+        ],
+        budget: "$7500",
+        gradient: "linear-gradient(135deg, #f093fb 0%, #f5576c 100%)",
+      },
+      {
+        title: "Проект для офисного комплекса Business Center",
+        logo: "B",
+        features: [
+          "Модернизация 156 рабочих мест с новыми замками",
+          "Внедрение системы электронных пропусков",
+          "Создание мобильного приложения для сотрудников",
+          "Интеграция с HR-системой компании",
+        ],
+        budget: "$12000",
+        gradient: "linear-gradient(135deg, #a8edea 0%, #fed6e3 100%)",
+      },
+    ];
+
+    let currentProject = 0;
+
+    function updateProject(index) {
+      const project = projects[index];
+      const showcase = document.getElementById("projectShowcase");
+
+      // Update project image
+      const projectImage = showcase.querySelector(".project-image");
+      projectImage.style.background = project.gradient;
+
+      // Update project details
+      showcase.querySelector(".project-logo").textContent = project.logo;
+      showcase.querySelector(".project-title").textContent = project.title;
+      showcase.querySelector(".project-budget span").textContent =
+        project.budget;
+
+      // Update features
+      const featureElements = showcase.querySelectorAll(".project-feature");
+      project.features.forEach((feature, i) => {
+        if (featureElements[i]) {
+          featureElements[i].textContent = feature;
+        }
+      });
+
+      // Update navigation dots
+      document.querySelectorAll(".nav-dot").forEach((dot, i) => {
+        dot.classList.toggle("active", i === index);
+      });
+
+      // Update navigation buttons
+      document
+        .getElementById("prevBtn")
+        .classList.toggle("disabled", index === 0);
+      document
+        .getElementById("nextBtn")
+        .classList.toggle("disabled", index === projects.length - 1);
+    }
+
+    // Navigation event listeners
+    document.getElementById("prevBtn").addEventListener("click", () => {
+      if (currentProject > 0) {
+        currentProject--;
+        updateProject(currentProject);
+      }
+    });
+
+    document.getElementById("nextBtn").addEventListener("click", () => {
+      if (currentProject < projects.length - 1) {
+        currentProject++;
+        updateProject(currentProject);
+      }
+    });
+
+    // Dot navigation
+    document.querySelectorAll(".nav-dot").forEach((dot, index) => {
+      dot.addEventListener("click", () => {
+        currentProject = index;
+        updateProject(currentProject);
+      });
+    });
+
+    // Initialize first project
+    updateProject(0);
+
+    // CTA Form submission
+    document
+      .getElementById("ctaForm")
+      .addEventListener("submit", function (e) {
+        e.preventDefault();
+
+        const formData = new FormData(e.target);
+        const data = Object.fromEntries(formData);
+
+        // Simple validation
+        if (!data.name!data.email) {
+      alert("Пожалуйста, заполните все поля");
+      return;
+    }
+
+    // Email validation
+    const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+    if (!emailRegex.test(data.email)) {
+      alert("Пожалуйста, введите корректный email адрес");
+      return;
+    }
+
+    // Simulate form submission
+    const submitBtn = e.target.querySelector("button");
+    const originalText = submitBtn.textContent;
+
+    submitBtn.textContent = "Отправляется...";
+    submitBtn.disabled = true;
+
+    setTimeout(() => {
+      alert(
+        "Спасибо за ваш вопрос! Мы свяжемся с вами в ближайшее время."
+      );
+      e.target.reset();
+      submitBtn.textContent = originalText;
+      submitBtn.disabled = false;
+    }, 1500);
+        });
+
+    // Smooth scroll for footer links
+    document.querySelectorAll('.footer a[href^="#"]').forEach((anchor) => {
+      anchor.addEventListener("click", function (e) {
+        e.preventDefault();
+        const target = document.querySelector(this.getAttribute("href"));
+        if (target) {
+          target.scrollIntoView({
+            behavior: "smooth",
+          });
+        }
+      });
+    });
+  </script>
+</body>
+
+</html>
